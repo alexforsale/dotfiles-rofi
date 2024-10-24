@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-24 Thu 19:14 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>index</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Kristian Alexander P" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">index</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgb27d03e">config.rasi</a></li>
+<li><a href="#org575c037">Themes</a>
+<ul>
+<li><a href="#orgc54cf94">nord</a></li>
+</ul>
+</li>
+<li><a href="#orgb6531cf">Scripts</a>
+<ul>
+<li><a href="#org3cae52d">rofi-logout</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+A <i>dmenu</i> replacement, it can act as a window switcher, or an application launcher.
+</p>
+<div id="outline-container-orgb27d03e" class="outline-2">
+<h2 id="orgb27d03e">config.rasi</h2>
+<div class="outline-text-2" id="text-orgb27d03e">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #0000ff;">configuration </span>{
+    <span style="color: #4169e1;">modi</span>: <span style="color: #bc8f8f;">"window,drun,run,ssh,combi,emoji"</span>;
+    <span style="color: #4169e1;">show-icons</span>: true;
+    <span style="color: #4169e1;">font</span>: <span style="color: #bc8f8f;">"JetBrainsMonoNL Nerd Font Mono 10"</span>;
+    <span style="color: #4169e1;">line-margin</span>: 10;
+    <span style="color: #4169e1;">display-ssh</span>:    <span style="color: #bc8f8f;">"&#62003;"</span>;
+    <span style="color: #4169e1;">display-run</span>:    <span style="color: #bc8f8f;">"&#61728;"</span>;
+    <span style="color: #4169e1;">display-drun</span>:   <span style="color: #bc8f8f;">"&#61573;"</span>;
+    <span style="color: #4169e1;">display-window</span>: <span style="color: #bc8f8f;">"&#62162;"</span>;
+    <span style="color: #4169e1;">display-combi</span>:  <span style="color: #bc8f8f;">"&#61474;"</span>;
+    <span style="color: #4169e1;">show-icons</span>:     true;
+}
+<span style="color: #00008b;">@theme</span> <span style="color: #bc8f8f;">"nord"</span>
+
+<span style="color: #0000ff;">listview </span>{
+    <span style="color: #4169e1;">lines</span>: 6;
+    <span style="color: #4169e1;">columns</span>: 2;
+}
+
+<span style="color: #0000ff;">window </span>{
+    <span style="color: #4169e1;">width</span>: 30%;
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org575c037" class="outline-2">
+<h2 id="org575c037">Themes</h2>
+<div class="outline-text-2" id="text-org575c037">
+</div>
+<div id="outline-container-orgc54cf94" class="outline-3">
+<h3 id="orgc54cf94">nord</h3>
+<div class="outline-text-3" id="text-orgc54cf94">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #b22222;">/* </span><span style="color: #b22222;">-*-css-*- </span><span style="color: #b22222;">*/</span>
+<span style="color: #b22222;">/**</span>
+<span style="color: #b22222;"> * Nordic rofi theme</span>
+<span style="color: #b22222;"> * Adapted by undiabler <a href="mailto:undiabler%40gmail.com">&lt;undiabler@gmail.com&gt;</a></span>
+<span style="color: #b22222;"> *</span>
+<span style="color: #b22222;"> * Nord Color palette imported from https://www.nordtheme.com/</span>
+<span style="color: #b22222;"> *</span>
+<span style="color: #b22222;"> </span><span style="color: #b22222;">*/</span>
+
+
+<span style="color: #0000ff;">* </span>{
+    <span style="color: #4169e1;">nord0</span>: <span style="color: #ffffff; background-color: #2e3440;">#2e3440</span>;
+    <span style="color: #4169e1;">nord1</span>: <span style="color: #ffffff; background-color: #3b4252;">#3b4252</span>;
+    <span style="color: #4169e1;">nord2</span>: <span style="color: #ffffff; background-color: #434c5e;">#434c5e</span>;
+    <span style="color: #4169e1;">nord3</span>: <span style="color: #ffffff; background-color: #4c566a;">#4c566a</span>;
+
+    <span style="color: #4169e1;">nord4</span>: <span style="color: #000000; background-color: #d8dee9;">#d8dee9</span>;
+    <span style="color: #4169e1;">nord5</span>: <span style="color: #000000; background-color: #e5e9f0;">#e5e9f0</span>;
+    <span style="color: #4169e1;">nord6</span>: <span style="color: #000000; background-color: #eceff4;">#eceff4</span>;
+
+    <span style="color: #4169e1;">nord7</span>: <span style="color: #000000; background-color: #8fbcbb;">#8fbcbb</span>;
+    <span style="color: #4169e1;">nord8</span>: <span style="color: #000000; background-color: #88c0d0;">#88c0d0</span>;
+    <span style="color: #4169e1;">nord9</span>: <span style="color: #000000; background-color: #81a1c1;">#81a1c1</span>;
+    <span style="color: #4169e1;">nord10</span>: <span style="color: #000000; background-color: #5e81ac;">#5e81ac</span>;
+    <span style="color: #4169e1;">nord11</span>: <span style="color: #ffffff; background-color: #bf616a;">#bf616a</span>;
+
+    <span style="color: #4169e1;">nord12</span>: <span style="color: #000000; background-color: #d08770;">#d08770</span>;
+    <span style="color: #4169e1;">nord13</span>: <span style="color: #000000; background-color: #ebcb8b;">#ebcb8b</span>;
+    <span style="color: #4169e1;">nord14</span>: <span style="color: #000000; background-color: #a3be8c;">#a3be8c</span>;
+    <span style="color: #4169e1;">nord15</span>: <span style="color: #000000; background-color: #b48ead;">#b48ead</span>;
+
+    <span style="color: #4169e1;">foreground</span>:  <span style="color: #00008b;">@nord9</span>;
+    <span style="color: #4169e1;">backlight</span>:   <span style="color: #000000; background-color: #ccffee;">#ccffeedd</span>;
+    <span style="color: #4169e1;">background-color</span>:  transparent;
+
+    <span style="color: #4169e1;">highlight</span>:     underline bold <span style="color: #000000; background-color: #eceff4;">#eceff4</span>;
+
+    <span style="color: #4169e1;">transparent</span>: <span style="color: #ffffff; background-color: #2e3440;">rgba(46,52,64,0)</span>;
+}
+
+<span style="color: #0000ff;">window </span>{
+    <span style="color: #4169e1;">location</span>: center;
+    <span style="color: #4169e1;">anchor</span>:   center;
+    <span style="color: #4169e1;">transparency</span>: <span style="color: #bc8f8f;">"screenshot"</span>;
+    <span style="color: #4169e1;">padding</span>: 10px;
+    <span style="color: #4169e1;">border</span>:  0px;
+    <span style="color: #4169e1;">border-radius</span>: 6px;
+
+    <span style="color: #4169e1;">background-color</span>: <span style="color: #00008b;">@transparent</span>;
+    <span style="color: #4169e1;">spacing</span>: 0;
+    <span style="color: #4169e1;">children</span>:  [mainbox];
+    <span style="color: #4169e1;">orientation</span>: horizontal;
+}
+
+<span style="color: #0000ff;">mainbox </span>{
+    <span style="color: #4169e1;">spacing</span>: 0;
+    <span style="color: #4169e1;">children</span>: [ inputbar, message, listview ];
+}
+
+<span style="color: #0000ff;">message </span>{
+    <span style="color: #4169e1;">color</span>: <span style="color: #00008b;">@nord0</span>;
+    <span style="color: #4169e1;">padding</span>: 5;
+    <span style="color: #4169e1;">border-color</span>: <span style="color: #00008b;">@foreground</span>;
+    <span style="color: #4169e1;">border</span>:  0px 2px 2px 2px;
+    <span style="color: #4169e1;">background-color</span>: <span style="color: #00008b;">@nord7</span>;
+}
+
+<span style="color: #0000ff;">inputbar </span>{
+    <span style="color: #4169e1;">color</span>: <span style="color: #00008b;">@nord6</span>;
+    <span style="color: #4169e1;">padding</span>: 11px;
+    <span style="color: #4169e1;">background-color</span>: <span style="color: #ffffff; background-color: #3b4252;">#3b4252</span>;
+
+    <span style="color: #4169e1;">border</span>: 1px;
+    <span style="color: #4169e1;">border-radius</span>:  6px 6px 0px 0px;
+    <span style="color: #4169e1;">border-color</span>: <span style="color: #00008b;">@nord10</span>;
+}
+
+<span style="color: #0000ff;">entry, prompt, case-indicator </span>{
+    <span style="color: #4169e1;">text-font</span>: inherit;
+    <span style="color: #4169e1;">text-color</span>:inherit;
+}
+
+<span style="color: #0000ff;">prompt </span>{
+    <span style="color: #4169e1;">margin</span>: 0px 1em 0em 0em ;
+}
+
+<span style="color: #0000ff;">listview </span>{
+    <span style="color: #4169e1;">padding</span>: 8px;
+    <span style="color: #4169e1;">border-radius</span>: 0px 0px 6px 6px;
+    <span style="color: #4169e1;">border-color</span>: <span style="color: #00008b;">@nord10</span>;
+    <span style="color: #4169e1;">border</span>: 0px 1px 1px 1px;
+    <span style="color: #4169e1;">background-color</span>: <span style="color: #ffffff; background-color: #2e3440;">rgba(46,52,64,0.9)</span>;
+    <span style="color: #4169e1;">dynamic</span>: false;
+}
+
+<span style="color: #0000ff;">element </span>{
+    <span style="color: #4169e1;">padding</span>: 3px;
+    <span style="color: #4169e1;">vertical-align</span>: 0.5;
+    <span style="color: #4169e1;">border-radius</span>: 4px;
+    <span style="color: #4169e1;">background-color</span>: transparent;
+    <span style="color: #4169e1;">color</span>: <span style="color: #00008b;">@foreground</span>;
+    <span style="color: #4169e1;">text-color</span>: <span style="color: #000000; background-color: #d8dee9;">rgb(216, 222, 233)</span>;
+}
+
+<span style="color: #0000ff;">element selected.normal </span>{
+    <span style="color: #4169e1;">background-color</span>: <span style="color: #00008b;">@nord7</span>;
+    <span style="color: #4169e1;">text-color</span>: <span style="color: #ffffff; background-color: #2e3440;">#2e3440</span>;
+}
+
+<span style="color: #0000ff;">element-text, element-icon </span>{
+    <span style="color: #4169e1;">background-color</span>: inherit;
+    <span style="color: #4169e1;">text-color</span>:       inherit;
+}
+
+<span style="color: #0000ff;">button </span>{
+    <span style="color: #4169e1;">padding</span>: 6px;
+    <span style="color: #4169e1;">color</span>: <span style="color: #00008b;">@foreground</span>;
+    <span style="color: #4169e1;">horizontal-align</span>: 0.5;
+
+    <span style="color: #4169e1;">border</span>: 2px 0px 2px 2px;
+    <span style="color: #4169e1;">border-radius</span>: 4px 0px 0px 4px;
+    <span style="color: #4169e1;">border-color</span>: <span style="color: #00008b;">@foreground</span>;
+}
+
+<span style="color: #0000ff;">button selected normal </span>{
+    <span style="color: #4169e1;">border</span>: 2px 0px 2px 2px;
+    <span style="color: #4169e1;">border-color</span>: <span style="color: #00008b;">@foreground</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb6531cf" class="outline-2">
+<h2 id="orgb6531cf">Scripts</h2>
+<div class="outline-text-2" id="text-orgb6531cf">
+</div>
+<div id="outline-container-org3cae52d" class="outline-3">
+<h3 id="org3cae52d">rofi-logout</h3>
+<div class="outline-text-3" id="text-org3cae52d">
+<div class="org-src-container">
+<pre class="src src-sh"><span style="color: #b8860b;">THEME</span>=${<span style="color: #b8860b;">1</span>:-logout}
+
+<span style="color: #b8860b;">question</span>=$(<span style="color: #00008b;">echo</span> <span style="color: #bc8f8f;">"&#983870; lock|&#983875; logout|&#984841; reboot|&#984101; shutdown"</span> | rofi -sep <span style="color: #bc8f8f;">"|"</span> <span style="color: #bc8f8f;">\</span>
+    -dmenu -i -p <span style="color: #bc8f8f;">'System: '</span> <span style="color: #bc8f8f;">""</span> <span style="color: #bc8f8f;">\</span>
+    -hide-scrollbar <span style="color: #bc8f8f;">\</span>
+    -eh 1 <span style="color: #bc8f8f;">\</span>
+    -color-enabled true <span style="color: #bc8f8f;">\</span>
+    -theme <span style="color: #bc8f8f;">"$THEME"</span>)
+
+<span style="color: #4169e1;">case</span> $<span style="color: #b8860b;">question</span><span style="color: #4169e1;"> in</span>
+    *lock)
+        <span style="color: #b22222;"># </span><span style="color: #b22222;">use lowercase only</span>
+        <span style="color: #4169e1;">case</span> <span style="color: #bc8f8f;">"${XDG_CURRENT_DESKTOP,,}"</span><span style="color: #4169e1;"> in</span>
+            hyprland)
+                hyprctl dispatch exit
+                ;;
+            *)
+                <span style="color: #4169e1;">if</span> [ <span style="color: #bc8f8f;">"$(pgrep -x lightdm)"</span> ] &amp;&amp; [ <span style="color: #bc8f8f;">"$(command -v light-locker)"</span> ]; <span style="color: #4169e1;">then</span>
+                    light-locker-command -l
+                <span style="color: #4169e1;">fi</span>
+                ;;
+        <span style="color: #4169e1;">esac</span>
+        ;;
+    *logout)
+        <span style="color: #4169e1;">case</span> <span style="color: #bc8f8f;">"${XDG_CURRENT_DESKTOP,,}"</span><span style="color: #4169e1;"> in</span>
+            hyprland)
+                hyprctl dispatch exit
+                ;;
+            openbox)
+                openbox --exit
+                ;;
+            i3)
+                i3-msg exit
+                ;;
+            qtile)
+                qtile cmd-obj -o cmd -f shutdown
+                ;;
+        <span style="color: #4169e1;">esac</span>
+        ;;
+    *reboot)
+        <span style="color: #4169e1;">if</span> [[ $(command -v systemctl) ]]; <span style="color: #4169e1;">then</span>
+            systemctl reboot
+        <span style="color: #4169e1;">else</span>
+            shutdown -r now
+        <span style="color: #4169e1;">fi</span>
+        ;;
+    *shutdown)
+        <span style="color: #4169e1;">if</span> [[ $(command -v systemctl) ]]; <span style="color: #4169e1;">then</span>
+            systemctl poweroff
+        <span style="color: #4169e1;">else</span>
+            poweroff
+        <span style="color: #4169e1;">fi</span>
+        ;;
+    *)
+        <span style="color: #4169e1;">exit</span> 0  <span style="color: #b22222;"># </span><span style="color: #b22222;">do nothing on wrong response</span>
+        ;;
+<span style="color: #4169e1;">esac</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2024-10-25 Fri 00:00</p>
+<p class="author">Author: Kristian Alexander P</p>
+<p class="date">Created: 2024-10-24 Thu 19:14</p>
+</div>
+</body>
+</html>
