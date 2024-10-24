@@ -1,0 +1,249 @@
+#+options: ':nil *:t -:t ::t <:t H:2 \n:nil ^:{} arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:nil
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: index
+#+date: <2024-10-25 Fri>
+#+author: Kristian Alexander P
+#+email: alexforsale@yahoo.com
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 29.4 (Org mode 9.8-pre)
+#+cite_export:
+#+property: EXPORT_FILE_NAME: index.html
+#+startup: showall
+#+setupfile: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+A /dmenu/ replacement, it can act as a window switcher, or an application launcher.
+* config.rasi
+:PROPERTIES:
+:header-args: :tangle .config/rofi/config.rasi :mkdirp t
+:END:
+
+#+begin_src css
+  configuration {
+      modi: "window,drun,run,ssh,combi,emoji";
+      show-icons: true;
+      font: "JetBrainsMonoNL Nerd Font Mono 10";
+      line-margin: 10;
+      display-ssh:    "";
+      display-run:    "";
+      display-drun:   "";
+      display-window: "";
+      display-combi:  "";
+      show-icons:     true;
+  }
+  @theme "nord"
+
+  listview {
+      lines: 6;
+      columns: 2;
+  }
+
+  window {
+      width: 30%;
+  }
+#+end_src
+* Themes
+** nord
+:PROPERTIES:
+:header-args: :tangle .config/rofi/themes/nord.rasi :mkdirp t
+:END:
+
+#+begin_src css
+  /* -*-css-*- */
+  /**
+   ,* Nordic rofi theme
+   ,* Adapted by undiabler <undiabler@gmail.com>
+   ,*
+   ,* Nord Color palette imported from https://www.nordtheme.com/
+   ,*
+   ,*/
+
+
+  ,* {
+      nord0: #2e3440;
+      nord1: #3b4252;
+      nord2: #434c5e;
+      nord3: #4c566a;
+
+      nord4: #d8dee9;
+      nord5: #e5e9f0;
+      nord6: #eceff4;
+
+      nord7: #8fbcbb;
+      nord8: #88c0d0;
+      nord9: #81a1c1;
+      nord10: #5e81ac;
+      nord11: #bf616a;
+
+      nord12: #d08770;
+      nord13: #ebcb8b;
+      nord14: #a3be8c;
+      nord15: #b48ead;
+
+      foreground:  @nord9;
+      backlight:   #ccffeedd;
+      background-color:  transparent;
+
+      highlight:     underline bold #eceff4;
+
+      transparent: rgba(46,52,64,0);
+  }
+
+  window {
+      location: center;
+      anchor:   center;
+      transparency: "screenshot";
+      padding: 10px;
+      border:  0px;
+      border-radius: 6px;
+
+      background-color: @transparent;
+      spacing: 0;
+      children:  [mainbox];
+      orientation: horizontal;
+  }
+
+  mainbox {
+      spacing: 0;
+      children: [ inputbar, message, listview ];
+  }
+
+  message {
+      color: @nord0;
+      padding: 5;
+      border-color: @foreground;
+      border:  0px 2px 2px 2px;
+      background-color: @nord7;
+  }
+
+  inputbar {
+      color: @nord6;
+      padding: 11px;
+      background-color: #3b4252;
+
+      border: 1px;
+      border-radius:  6px 6px 0px 0px;
+      border-color: @nord10;
+  }
+
+  entry, prompt, case-indicator {
+      text-font: inherit;
+      text-color:inherit;
+  }
+
+  prompt {
+      margin: 0px 1em 0em 0em ;
+  }
+
+  listview {
+      padding: 8px;
+      border-radius: 0px 0px 6px 6px;
+      border-color: @nord10;
+      border: 0px 1px 1px 1px;
+      background-color: rgba(46,52,64,0.9);
+      dynamic: false;
+  }
+
+  element {
+      padding: 3px;
+      vertical-align: 0.5;
+      border-radius: 4px;
+      background-color: transparent;
+      color: @foreground;
+      text-color: rgb(216, 222, 233);
+  }
+
+  element selected.normal {
+      background-color: @nord7;
+      text-color: #2e3440;
+  }
+
+  element-text, element-icon {
+      background-color: inherit;
+      text-color:       inherit;
+  }
+
+  button {
+      padding: 6px;
+      color: @foreground;
+      horizontal-align: 0.5;
+
+      border: 2px 0px 2px 2px;
+      border-radius: 4px 0px 0px 4px;
+      border-color: @foreground;
+  }
+
+  button selected normal {
+      border: 2px 0px 2px 2px;
+      border-color: @foreground;
+  }
+#+end_src
+* Scripts
+** rofi-logout
+:PROPERTIES:
+:header-args: :tangle .local/bin/rofi-logout :shebang #!/usr/bin/env bash :mkdirp t
+:END:
+
+#+begin_src sh
+  THEME=${1:-logout}
+
+  question=$(echo "󰌾 lock|󰍃 logout|󰜉 reboot|󰐥 shutdown" | rofi -sep "|" \
+      -dmenu -i -p 'System: ' "" \
+      -hide-scrollbar \
+      -eh 1 \
+      -color-enabled true \
+      -theme "$THEME")
+
+  case $question in
+      ,*lock)
+          # use lowercase only
+          case "${XDG_CURRENT_DESKTOP,,}" in
+              hyprland)
+                  hyprctl dispatch exit
+                  ;;
+              ,*)
+                  if [ "$(pgrep -x lightdm)" ] && [ "$(command -v light-locker)" ]; then
+                      light-locker-command -l
+                  fi
+                  ;;
+          esac
+          ;;
+      ,*logout)
+          case "${XDG_CURRENT_DESKTOP,,}" in
+              hyprland)
+                  hyprctl dispatch exit
+                  ;;
+              openbox)
+                  openbox --exit
+                  ;;
+              i3)
+                  i3-msg exit
+                  ;;
+              qtile)
+                  qtile cmd-obj -o cmd -f shutdown
+                  ;;
+          esac
+          ;;
+      ,*reboot)
+          if [[ $(command -v systemctl) ]]; then
+              systemctl reboot
+          else
+              shutdown -r now
+          fi
+          ;;
+      ,*shutdown)
+          if [[ $(command -v systemctl) ]]; then
+              systemctl poweroff
+          else
+              poweroff
+          fi
+          ;;
+      ,*)
+          exit 0  # do nothing on wrong response
+          ;;
+  esac
+#+end_src
