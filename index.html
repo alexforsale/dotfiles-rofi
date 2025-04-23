@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-04-23 Wed 18:45 -->
+<!-- 2025-04-23 Wed 18:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Rofi Configuration Files</title>
@@ -28,15 +28,15 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc1080d6">config.rasi</a></li>
-<li><a href="#org287bc48">Themes</a>
+<li><a href="#org1d61148">config.rasi</a></li>
+<li><a href="#org1435d8b">Themes</a>
 <ul>
-<li><a href="#orged42e2c">nord</a></li>
+<li><a href="#org6ab21be">nord</a></li>
 </ul>
 </li>
-<li><a href="#orgf3871a5">Scripts</a>
+<li><a href="#org8233c27">Scripts</a>
 <ul>
-<li><a href="#orgb06ab80">rofi-logout</a></li>
+<li><a href="#orge003771">rofi-logout</a></li>
 </ul>
 </li>
 </ul>
@@ -44,13 +44,34 @@
 </div>
 <p>
 A <i>dmenu</i> replacement, it can act as a window switcher, or an application launcher. Very scriptable, I've use it to create a window switcher, greenclip clipboard, and as an application chooser.
-<a href="./assets/img/rofi-menu-2025-04-24_01-33.png"><img src="./assets/img/rofi-menu-2025-04-24_01-33.png" alt="rofi-menu-2025-04-24_01-33.png" /></a>
-<a href="./assets/img/rofi-window-2025-04-24_01-34.png"><img src="./assets/img/rofi-window-2025-04-24_01-34.png" alt="rofi-window-2025-04-24_01-34.png" /></a>
-<a href="./assets/img/rofi-greenclip-2025-04-24_01-38.png"><img src="./assets/img/rofi-greenclip-2025-04-24_01-38.png" alt="rofi-greenclip-2025-04-24_01-38.png" /></a>
 </p>
-<div id="outline-container-orgc1080d6" class="outline-2">
-<h2 id="orgc1080d6">config.rasi</h2>
-<div class="outline-text-2" id="text-orgc1080d6">
+<ul class="org-ul">
+<li>rofi-menu</li>
+</ul>
+
+<div id="orgee1dcb2" class="figure">
+<p><a href="./assets/img/rofi-menu-2025-04-24_01-33.png"><img src="./assets/img/rofi-menu-2025-04-24_01-33.png" alt="rofi-menu-2025-04-24_01-33.png" /></a>
+</p>
+</div>
+<ul class="org-ul">
+<li>rofi-window</li>
+</ul>
+
+<div id="org7d7122f" class="figure">
+<p><a href="./assets/img/rofi-window-2025-04-24_01-34.png"><img src="./assets/img/rofi-window-2025-04-24_01-34.png" alt="rofi-window-2025-04-24_01-34.png" /></a>
+</p>
+</div>
+<ul class="org-ul">
+<li>rofi-greenclip</li>
+</ul>
+
+<div id="org0a82760" class="figure">
+<p><a href="./assets/img/rofi-greenclip-2025-04-24_01-38.png"><img src="./assets/img/rofi-greenclip-2025-04-24_01-38.png" alt="rofi-greenclip-2025-04-24_01-38.png" /></a>
+</p>
+</div>
+<div id="outline-container-org1d61148" class="outline-2">
+<h2 id="org1d61148">config.rasi</h2>
+<div class="outline-text-2" id="text-org1d61148">
 <div class="org-src-container">
 <pre class="src src-css"><span style="color: #0000ff;">configuration</span> {
     <span style="color: #4169e1;">modi</span>: <span style="color: #bc8f8f;">"window,drun,run,ssh,combi,emoji"</span>;
@@ -78,13 +99,13 @@ A <i>dmenu</i> replacement, it can act as a window switcher, or an application l
 </div>
 </div>
 </div>
-<div id="outline-container-org287bc48" class="outline-2">
-<h2 id="org287bc48">Themes</h2>
-<div class="outline-text-2" id="text-org287bc48">
+<div id="outline-container-org1435d8b" class="outline-2">
+<h2 id="org1435d8b">Themes</h2>
+<div class="outline-text-2" id="text-org1435d8b">
 </div>
-<div id="outline-container-orged42e2c" class="outline-3">
-<h3 id="orged42e2c">nord</h3>
-<div class="outline-text-3" id="text-orged42e2c">
+<div id="outline-container-org6ab21be" class="outline-3">
+<h3 id="org6ab21be">nord</h3>
+<div class="outline-text-3" id="text-org6ab21be">
 <div class="org-src-container">
 <pre class="src src-css"><span style="color: #b22222;">/* </span><span style="color: #b22222;">-*-css-*-</span><span style="color: #b22222;"> */</span>
 <span style="color: #b22222;">/**</span>
@@ -219,15 +240,15 @@ A <i>dmenu</i> replacement, it can act as a window switcher, or an application l
 </div>
 </div>
 </div>
-<div id="outline-container-orgf3871a5" class="outline-2">
-<h2 id="orgf3871a5">Scripts</h2>
-<div class="outline-text-2" id="text-orgf3871a5">
+<div id="outline-container-org8233c27" class="outline-2">
+<h2 id="org8233c27">Scripts</h2>
+<div class="outline-text-2" id="text-org8233c27">
 </div>
-<div id="outline-container-orgb06ab80" class="outline-3">
-<h3 id="orgb06ab80">rofi-logout</h3>
-<div class="outline-text-3" id="text-orgb06ab80">
+<div id="outline-container-orge003771" class="outline-3">
+<h3 id="orge003771">rofi-logout</h3>
+<div class="outline-text-3" id="text-orge003771">
 
-<div id="orga6af5b4" class="figure">
+<div id="org42f6ad0" class="figure">
 <p><a href="./assets/img/rofi-logout-2025-04-24_01-33.png"><img src="./assets/img/rofi-logout-2025-04-24_01-33.png" alt="rofi-logout-2025-04-24_01-33.png" /></a>
 </p>
 </div>
@@ -298,7 +319,7 @@ A <i>dmenu</i> replacement, it can act as a window switcher, or an application l
 <div id="postamble" class="status">
 <p class="date">Date: 2024-10-25 Fri 00:00</p>
 <p class="author">Author: Kristian Alexander P</p>
-<p class="date">Created: 2025-04-23 Wed 18:45</p>
+<p class="date">Created: 2025-04-23 Wed 18:47</p>
 </div>
 </body>
 </html>
