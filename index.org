@@ -20,8 +20,11 @@
 #+HTML_HEAD: <style> li{max-width:800px;}</style>
 
 A /dmenu/ replacement, it can act as a window switcher, or an application launcher. Very scriptable, I've use it to create a window switcher, greenclip clipboard, and as an application chooser.
+- rofi-menu
 [[./assets/img/rofi-menu-2025-04-24_01-33.png][file:./assets/img/rofi-menu-2025-04-24_01-33.png]]
+- rofi-window
 [[./assets/img/rofi-window-2025-04-24_01-34.png][file:./assets/img/rofi-window-2025-04-24_01-34.png]]
+- rofi-greenclip
 [[./assets/img/rofi-greenclip-2025-04-24_01-38.png][file:./assets/img/rofi-greenclip-2025-04-24_01-38.png]]
 * config.rasi
 :PROPERTIES:
