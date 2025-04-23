@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-04-23 Wed 18:47 -->
+<!-- 2025-04-23 Wed 19:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Rofi Configuration Files</title>
@@ -28,15 +28,15 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1d61148">config.rasi</a></li>
-<li><a href="#org1435d8b">Themes</a>
+<li><a href="#org0893251">config.rasi</a></li>
+<li><a href="#orgd88dc85">Themes</a>
 <ul>
-<li><a href="#org6ab21be">nord</a></li>
+<li><a href="#orgb501ba7">nord</a></li>
 </ul>
 </li>
-<li><a href="#org8233c27">Scripts</a>
+<li><a href="#org9ddac2c">Scripts</a>
 <ul>
-<li><a href="#orge003771">rofi-logout</a></li>
+<li><a href="#org55ccba3">rofi-logout</a></li>
 </ul>
 </li>
 </ul>
@@ -46,32 +46,38 @@
 A <i>dmenu</i> replacement, it can act as a window switcher, or an application launcher. Very scriptable, I've use it to create a window switcher, greenclip clipboard, and as an application chooser.
 </p>
 <ul class="org-ul">
-<li>rofi-menu</li>
+<li>rofi-menu
+A simple application menu, <i>dmenu</i> works fine, but I really love the <i>emacs</i> navigation keys (<code>C-n</code>, <code>C-p</code>, <code>C-b</code>, and <code>C-f</code>).</li>
 </ul>
 
-<div id="orgee1dcb2" class="figure">
+<div id="org1d0d576" class="figure">
 <p><a href="./assets/img/rofi-menu-2025-04-24_01-33.png"><img src="./assets/img/rofi-menu-2025-04-24_01-33.png" alt="rofi-menu-2025-04-24_01-33.png" /></a>
 </p>
 </div>
 <ul class="org-ul">
-<li>rofi-window</li>
+<li>rofi-window
+Useful since I'm almost always only use a <i>window manager</i>.</li>
 </ul>
 
-<div id="org7d7122f" class="figure">
+<div id="orgdfc571d" class="figure">
 <p><a href="./assets/img/rofi-window-2025-04-24_01-34.png"><img src="./assets/img/rofi-window-2025-04-24_01-34.png" alt="rofi-window-2025-04-24_01-34.png" /></a>
 </p>
 </div>
 <ul class="org-ul">
-<li>rofi-greenclip</li>
+<li>rofi-greenclip
+Easily access my latest clipboard.</li>
 </ul>
 
-<div id="org0a82760" class="figure">
+<div id="orgf44e0ab" class="figure">
 <p><a href="./assets/img/rofi-greenclip-2025-04-24_01-38.png"><img src="./assets/img/rofi-greenclip-2025-04-24_01-38.png" alt="rofi-greenclip-2025-04-24_01-38.png" /></a>
 </p>
 </div>
-<div id="outline-container-org1d61148" class="outline-2">
-<h2 id="org1d61148">config.rasi</h2>
-<div class="outline-text-2" id="text-org1d61148">
+<div id="outline-container-org0893251" class="outline-2">
+<h2 id="org0893251">config.rasi</h2>
+<div class="outline-text-2" id="text-org0893251">
+<p>
+The main configuration, the only dependency needed here is the <i>JetBrain Mono</i> font, provided by the <i>ttf-jetbrains-mono-nerd</i> package in <i>archlinux</i>.
+</p>
 <div class="org-src-container">
 <pre class="src src-css"><span style="color: #0000ff;">configuration</span> {
     <span style="color: #4169e1;">modi</span>: <span style="color: #bc8f8f;">"window,drun,run,ssh,combi,emoji"</span>;
@@ -99,13 +105,17 @@ A <i>dmenu</i> replacement, it can act as a window switcher, or an application l
 </div>
 </div>
 </div>
-<div id="outline-container-org1435d8b" class="outline-2">
-<h2 id="org1435d8b">Themes</h2>
-<div class="outline-text-2" id="text-org1435d8b">
+<div id="outline-container-orgd88dc85" class="outline-2">
+<h2 id="orgd88dc85">Themes</h2>
+<div class="outline-text-2" id="text-orgd88dc85">
 </div>
-<div id="outline-container-org6ab21be" class="outline-3">
-<h3 id="org6ab21be">nord</h3>
-<div class="outline-text-3" id="text-org6ab21be">
+<div id="outline-container-orgb501ba7" class="outline-3">
+<h3 id="orgb501ba7">nord</h3>
+<div class="outline-text-3" id="text-orgb501ba7">
+<p>
+<a href="https://github.com/nordtheme/nord">The only colorscheme I need!</a>
+</p>
+
 <div class="org-src-container">
 <pre class="src src-css"><span style="color: #b22222;">/* </span><span style="color: #b22222;">-*-css-*-</span><span style="color: #b22222;"> */</span>
 <span style="color: #b22222;">/**</span>
@@ -240,18 +250,17 @@ A <i>dmenu</i> replacement, it can act as a window switcher, or an application l
 </div>
 </div>
 </div>
-<div id="outline-container-org8233c27" class="outline-2">
-<h2 id="org8233c27">Scripts</h2>
-<div class="outline-text-2" id="text-org8233c27">
+<div id="outline-container-org9ddac2c" class="outline-2">
+<h2 id="org9ddac2c">Scripts</h2>
+<div class="outline-text-2" id="text-org9ddac2c">
 </div>
-<div id="outline-container-orge003771" class="outline-3">
-<h3 id="orge003771">rofi-logout</h3>
-<div class="outline-text-3" id="text-orge003771">
-
-<div id="org42f6ad0" class="figure">
-<p><a href="./assets/img/rofi-logout-2025-04-24_01-33.png"><img src="./assets/img/rofi-logout-2025-04-24_01-33.png" alt="rofi-logout-2025-04-24_01-33.png" /></a>
+<div id="outline-container-org55ccba3" class="outline-3">
+<h3 id="org55ccba3">rofi-logout</h3>
+<div class="outline-text-3" id="text-org55ccba3">
+<p>
+<a href="./assets/img/rofi-logout-2025-04-24_01-33.png"><img src="./assets/img/rofi-logout-2025-04-24_01-33.png" alt="rofi-logout-2025-04-24_01-33.png" /></a>
+This script can be used in various <i>window manager</i>.
 </p>
-</div>
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #b8860b;">THEME</span>=${<span style="color: #b8860b;">1</span>:-logout}
 
@@ -319,7 +328,7 @@ A <i>dmenu</i> replacement, it can act as a window switcher, or an application l
 <div id="postamble" class="status">
 <p class="date">Date: 2024-10-25 Fri 00:00</p>
 <p class="author">Author: Kristian Alexander P</p>
-<p class="date">Created: 2025-04-23 Wed 18:47</p>
+<p class="date">Created: 2025-04-23 Wed 19:01</p>
 </div>
 </body>
 </html>
