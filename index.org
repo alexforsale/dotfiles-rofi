@@ -39,7 +39,7 @@ The main configuration, the only dependency needed here is the /JetBrain Mono/ f
   configuration {
       modi: "window,drun,run,ssh,combi,emoji";
       show-icons: true;
-      font: "JetBrainsMonoNL Nerd Font Mono 10";
+      font: "JetBrainsMonoNL Nerd Font Mono 8";
       line-margin: 10;
       display-ssh:    "";
       display-run:    "";
