@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-05-16 Fri 14:02 -->
+<!-- 2025-05-16 Fri 14:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Rofi Configuration Files</title>
@@ -28,15 +28,15 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9052017">config.rasi</a></li>
-<li><a href="#orga03969a">Themes</a>
+<li><a href="#org45d8b7f">config.rasi</a></li>
+<li><a href="#orgff7e297">Themes</a>
 <ul>
-<li><a href="#org3fc3388">nord</a></li>
+<li><a href="#orgf4fea1a">nord</a></li>
 </ul>
 </li>
-<li><a href="#org724e97e">Scripts</a>
+<li><a href="#orgc96781c">Scripts</a>
 <ul>
-<li><a href="#orgd0f841c">rofi-logout</a></li>
+<li><a href="#orgb043968">rofi-logout</a></li>
 </ul>
 </li>
 </ul>
@@ -50,7 +50,7 @@ A <i>dmenu</i> replacement, it can act as a window switcher, or an application l
 A simple application menu, <i>dmenu</i> works fine, but I really love the <i>emacs</i> navigation keys (<code>C-n</code>, <code>C-p</code>, <code>C-b</code>, and <code>C-f</code>).</li>
 </ul>
 
-<div id="orgab47fd3" class="figure">
+<div id="org0a37b59" class="figure">
 <p><a href="./assets/img/rofi-menu-2025-04-24_01-33.png"><img src="./assets/img/rofi-menu-2025-04-24_01-33.png" alt="rofi-menu-2025-04-24_01-33.png" /></a>
 </p>
 </div>
@@ -59,7 +59,7 @@ A simple application menu, <i>dmenu</i> works fine, but I really love the <i>ema
 Useful since I'm almost always only use a <i>window manager</i>.</li>
 </ul>
 
-<div id="orgccfd82a" class="figure">
+<div id="org8b6cd57" class="figure">
 <p><a href="./assets/img/rofi-window-2025-04-24_01-34.png"><img src="./assets/img/rofi-window-2025-04-24_01-34.png" alt="rofi-window-2025-04-24_01-34.png" /></a>
 </p>
 </div>
@@ -68,13 +68,13 @@ Useful since I'm almost always only use a <i>window manager</i>.</li>
 Easily access my latest clipboard.</li>
 </ul>
 
-<div id="org42937f2" class="figure">
+<div id="orgadefeb6" class="figure">
 <p><a href="./assets/img/rofi-greenclip-2025-04-24_01-38.png"><img src="./assets/img/rofi-greenclip-2025-04-24_01-38.png" alt="rofi-greenclip-2025-04-24_01-38.png" /></a>
 </p>
 </div>
-<div id="outline-container-org9052017" class="outline-2">
-<h2 id="org9052017">config.rasi</h2>
-<div class="outline-text-2" id="text-org9052017">
+<div id="outline-container-org45d8b7f" class="outline-2">
+<h2 id="org45d8b7f">config.rasi</h2>
+<div class="outline-text-2" id="text-org45d8b7f">
 <p>
 The main configuration, the only dependency needed here is the <i>JetBrain Mono</i> font, provided by the <i>ttf-jetbrains-mono-nerd</i> package in <i>archlinux</i>.
 </p>
@@ -82,7 +82,7 @@ The main configuration, the only dependency needed here is the <i>JetBrain Mono<
 <pre class="src src-css"><span style="color: #0000ff;">configuration</span> {
     <span style="color: #4169e1;">modi</span>: <span style="color: #bc8f8f;">"window,drun,run,ssh,combi,emoji"</span>;
     <span style="color: #4169e1;">show-icons</span>: true;
-    <span style="color: #4169e1;">font</span>: <span style="color: #bc8f8f;">"JetBrainsMonoNL Nerd Font Mono 10"</span>;
+    <span style="color: #4169e1;">font</span>: <span style="color: #bc8f8f;">"JetBrainsMonoNL Nerd Font Mono 8"</span>;
     <span style="color: #4169e1;">line-margin</span>: 10;
     <span style="color: #4169e1;">display-ssh</span>:    <span style="color: #bc8f8f;">"&#62003;"</span>;
     <span style="color: #4169e1;">display-run</span>:    <span style="color: #bc8f8f;">"&#61728;"</span>;
@@ -105,13 +105,13 @@ The main configuration, the only dependency needed here is the <i>JetBrain Mono<
 </div>
 </div>
 </div>
-<div id="outline-container-orga03969a" class="outline-2">
-<h2 id="orga03969a">Themes</h2>
-<div class="outline-text-2" id="text-orga03969a">
+<div id="outline-container-orgff7e297" class="outline-2">
+<h2 id="orgff7e297">Themes</h2>
+<div class="outline-text-2" id="text-orgff7e297">
 </div>
-<div id="outline-container-org3fc3388" class="outline-3">
-<h3 id="org3fc3388">nord</h3>
-<div class="outline-text-3" id="text-org3fc3388">
+<div id="outline-container-orgf4fea1a" class="outline-3">
+<h3 id="orgf4fea1a">nord</h3>
+<div class="outline-text-3" id="text-orgf4fea1a">
 <p>
 <a href="https://github.com/nordtheme/nord">The only colorscheme I need!</a>
 </p>
@@ -250,15 +250,15 @@ The main configuration, the only dependency needed here is the <i>JetBrain Mono<
 </div>
 </div>
 </div>
-<div id="outline-container-org724e97e" class="outline-2">
-<h2 id="org724e97e">Scripts</h2>
-<div class="outline-text-2" id="text-org724e97e">
+<div id="outline-container-orgc96781c" class="outline-2">
+<h2 id="orgc96781c">Scripts</h2>
+<div class="outline-text-2" id="text-orgc96781c">
 </div>
-<div id="outline-container-orgd0f841c" class="outline-3">
-<h3 id="orgd0f841c">rofi-logout</h3>
-<div class="outline-text-3" id="text-orgd0f841c">
+<div id="outline-container-orgb043968" class="outline-3">
+<h3 id="orgb043968">rofi-logout</h3>
+<div class="outline-text-3" id="text-orgb043968">
 
-<div id="orgcc77928" class="figure">
+<div id="org31a84ec" class="figure">
 <p><a href="./assets/img/rofi-logout-2025-04-24_01-33.png"><img src="./assets/img/rofi-logout-2025-04-24_01-33.png" alt="rofi-logout-2025-04-24_01-33.png" /></a>
 </p>
 </div>
@@ -333,7 +333,7 @@ This script can be used in various <i>window manager</i>. No option for suspend 
 <div id="postamble" class="status">
 <p class="date">Date: 2024-10-25 Fri 00:00</p>
 <p class="author">Author: Kristian Alexander P</p>
-<p class="date">Created: 2025-05-16 Fri 14:02</p>
+<p class="date">Created: 2025-05-16 Fri 14:19</p>
 </div>
 </body>
 </html>
