@@ -24,4 +24,5 @@
 #+end_html
 
 * About
+[[./assets/img/rofi-mpd-2025-05-16_21-00.png][file:./assets/img/rofi-mpd-2025-05-16_21-00.png]]
 This repository is a part of a collection of my [[https://github.com/alexforsale/dotfiles/][dotfiles]]. Please see [[./index.org][index.org]] for details.
