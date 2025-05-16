@@ -202,7 +202,8 @@ The main configuration, the only dependency needed here is the /JetBrain Mono/ f
 :header-args: :tangle .local/bin/rofi-logout :shebang #!/usr/bin/env bash :mkdirp t
 :END:
 [[./assets/img/rofi-logout-2025-04-24_01-33.png][file:./assets/img/rofi-logout-2025-04-24_01-33.png]]
-This script can be used in various /window manager/.
+
+This script can be used in various /window manager/. No option for suspend and hibernate, since suspend mostly used on laptops, and it can be achieve by simply closing the monitor lid, this also for hibernate, I'll let the system handle it.
 #+begin_src sh
   THEME=${1:-logout}
 
